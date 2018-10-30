@@ -1,16 +1,15 @@
 <mat-sidenav-container>
-  
-  <mat-sidenav>
+
+  <mat-sidenav #sidenav>
       <app-sidenav-list></app-sidenav-list>
   </mat-sidenav>
 
-  <mat-sidenav-contant>
-    <app-header></app-header>
+  <mat-sidenav-content>
+    <app-header (SideNavigationToggle)="sidenav.toggle()"></app-header>
     <app-navtabs></app-navtabs>
-  </mat-sidenav-contant>
+  </mat-sidenav-content>
 
 
-
+  <router-outlet></router-outlet>
 </mat-sidenav-container>
 
-<router-outlet></router-outlet>
