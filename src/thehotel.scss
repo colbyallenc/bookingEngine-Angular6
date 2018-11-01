@@ -86,16 +86,20 @@ $thehotel: mat-light-theme($thehotel-primary, $thehotel-accent, $thehotel-warn);
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+
 @include angular-material-theme($thehotel);
+
+// NavTabs Component SCSS file
+@include navtabs-component-theme($thehotel);
 
 
 
 
 // All of our styles will go here
-.navTabs-container {
-    background-color: mat-color($thehotel-primary, lighter);
-}
 
+// SideNav styles
 .mat-list-option:hover, 
 .mat-list-option:focus, 
 .mat-nav-list .mat-list-item:hover, 
