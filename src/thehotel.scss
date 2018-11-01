@@ -10,7 +10,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $thehotel-primary: mat-palette($mat-teal, 200);
-$thehotel-accent:  mat-palette($mat-pink, A200, A100, A400);
+$thehotel-accent:  mat-palette($mat-teal, 50);
 
 // The warn palette is optional (defaults to red).
 $thehotel-warn:    mat-palette($mat-red);
@@ -22,3 +22,8 @@ $thehotel: mat-light-theme($thehotel-primary, $thehotel-accent, $thehotel-warn);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($thehotel);
+
+
+.navTabs-container {
+    background-color: mat-color($thehotel-accent);
+}
